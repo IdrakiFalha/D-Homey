@@ -1,38 +1,73 @@
-# D'Homey - Smart Co-Living Application
+# D'Homey - Manual dan Panduan Aplikasi
 
-D'Homey adalah sebuah aplikasi manajemen dan komunitas indekos (kos-kosan) berbasis mobile yang mengintegrasikan berbagai aspek pengelolaan properti dengan fitur interaktif bagi para penghuninya. Aplikasi ini bertujuan untuk mempermudah pekerjaan pengelola/admin sekaligus menciptakan lingkungan kos yang nyaman, komunikatif, dan saling terhubung antar penghuni.
-
-Aplikasi ini dibagi menjadi dua *role* atau hak akses utama: **Penghuni (User)** dan **Admin (Pengelola Kos)**.
+Dokumen ini memuat panduan instalasi, penggunaan modul, serta spesifikasi fitur sistem pintar manajemen dan komunitas indekos D'Homey.
 
 ---
 
-## 🚀 Fitur Utama
-
-### 1. Fitur untuk Penghuni (User)
-Penghuni memiliki akses ke berbagai layanan yang memudahkan kehidupan sehari-hari mereka di kos:
-* **Beranda / Dashboard:** Menampilkan sapaan personalisasi dan menyediakan akses cepat (Pintasan Layanan) seperti Laundry, Layanan Perbaikan, Belanja/Pesan Makanan, serta permintaan pembersihan kamar atau toilet (terintegrasi langsung dengan WhatsApp pengelola).
-* **Agenda & Hangout Plans:** Mengusulkan acara santai (mabar game, nonton bareng) dengan sistem RSVP. Agenda yang sudah lewat tenggat waktu akan otomatis disembunyikan.
-* **Komunikasi & Obrolan (Chatting):**
-  * *Personal Chat:* Mengirim pesan teks, pesan suara (*voice note*), foto (kamera/galeri), dan berbagi lokasi secara *real-time*.
-  * *Panggilan (Call & Video Call):* Panggilan suara dan video langsung di dalam aplikasi.
-  * *Community Chat:* Grup terbuka untuk seluruh penghuni bersosialisasi.
-* **Sistem Pelaporan (Technical Report):** Melaporkan kerusakan fasilitas kamar (AC bocor, lampu mati) kepada admin.
-* **Profil & Personalisasi:** Mengubah foto profil, penyesuaian tema (Dark/Light Mode), pengaturan bahasa, notifikasi, serta daftar hobi.
-
-### 2. Fitur untuk Admin (Pengelola Kos)
-Admin memiliki panel dashboard khusus untuk memantau dan mengelola seluruh operasional secara terpusat:
-* **Dashboard Statistik:** Menampilkan data ringkas *real-time* meliputi jumlah Penghuni Aktif, Kamar Kosong, serta Laporan/Komplain.
-* **Manajemen Kamar & Penghuni:** Mengelola ketersediaan, fasilitas kamar, verifikasi penghuni baru, serta informasi kontak darurat (*emergency contact*).
-* **Tracking Pembayaran (Iuran):** Memantau tanggal jatuh tempo dan pencatatan pembayaran sewa bulanan.
-* **Manajemen Laporan & Agenda:** Meninjau keluhan teknis pengguna serta melakukan verifikasi (setuju/tolak) terhadap usulan rencana *Hangout* penghuni.
+## Informasi Repositori
+Detail source code aplikasi D'Homey dapat diakses melalui repositori resmi proyek:
+https://github.com/IdrakiFalha/D-Homey
 
 ---
 
-## 🛠️ Spesifikasi Teknis
-
-* **Frontend Framework:** Flutter (Bahasa Pemrograman Dart) — Mendukung Android & iOS.
-* **Backend Ecosystem:** Firebase (Cloud Firestore, Firebase Authentication, Cloud Storage).
-* **UI/UX Design:** Desain modern & dinamis menggunakan konsep *Glassmorphism* serta dukungan penuh *Dark Mode* dan *Light Mode*.
+## Proses Instalasi
+Untuk menginstal aplikasi D'Homey pada perangkat seluler, ikuti langkah-langkah berikut:
+1. Pastikan perangkat Anda menggunakan sistem operasi Android (atau iOS jika dijalankan dalam mode pengembangan).
+2. Perangkat harus tersambung secara stabil dengan koneksi internet.
+3. Unduh file .apk aplikasi melalui tautan distribusi yang telah disediakan oleh pihak pengelola.
+4. Setelah proses unduh selesai, buka berkas tersebut dan lakukan instalasi aplikasi dengan mengikuti petunjuk di layar.
+5. Jika muncul notifikasi izin keamanan sistem, aktifkan opsi "Izinkan instalasi dari sumber tidak dikenal" (Allow installation from unknown sources) untuk melanjutkan instalasi hingga selesai.
 
 ---
-> **Catatan Hukum:** Repositori ini berisi *source code* resmi dari aplikasi D'Homey yang diunggah khusus untuk memenuhi berkas persyaratan pendaftaran Hak Kekayaan Intelektual (HKI) dalam kategori Program Komputer.
+
+## Cara Menggunakan Aplikasi dan Deskripsi Modul
+
+Aplikasi D'Homey membagi aksesibilitas sistem ke dalam dua peran (role) utama: Penghuni dan Admin. Berikut adalah rincian fungsionalitas setiap halamannya:
+
+### A. Hak Akses: Penghuni (User)
+
+#### 1. Halaman Login dan Registrasi
+* Pengguna diarahkan ke halaman utama untuk masuk (authentication) menggunakan email dan kata sandi yang telah terdaftar di database Firebase.
+* Jika belum memiliki akun, calon penghuni dapat memilih opsi untuk melakukan registrasi sebagai penghuni baru guna mengajukan permohonan kamar.
+
+#### 2. Beranda Penghuni (User Dashboard)
+Setelah berhasil masuk, pengguna disajikan halaman beranda personal dengan berbagai fitur layanan pintas (shortcut):
+* **Pemesanan Layanan:** Akses cepat ke layanan Laundry dan Room/Toilet Cleaning yang terintegrasi langsung ke nomor WhatsApp pengelola.
+* **Belanja dan Makanan:** Tautan integrasi ke platform eksternal untuk pemenuhan kebutuhan logistik harian.
+* **Daftar Agenda (Hangout Plans):** Menampilkan lini masa kegiatan komunitas terdekat. Halaman ini juga memuat menu penyesuaian tema (Dark/Light Mode) serta pengaturan bahasa aplikasi.
+
+#### 3. Fitur Hangout Plans (Agenda Komunitas)
+Penghuni dapat merencanakan dan mengusulkan kegiatan santai bersama penghuni lain. 
+* Input data meliputi: Judul Agenda (misal: Mabar ML, Nobar Film), Lokasi, Tanggal, dan Waktu.
+* Setelah disetujui Admin, agenda akan muncul secara publik dan penghuni lain dapat melakukan RSVP (menekan tombol "Ikut"). Sistem otomatis menyembunyikan agenda yang telah melewati batas tenggat waktu.
+
+#### 4. Fitur Komunikasi (Chat dan Panggilan)
+Memfasilitasi interaksi sosial antarpanghuni secara real-time:
+* **Personal dan Community Chat:** Layanan pesan privat antar-individu serta grup terbuka (group chat) untuk seluruh penghuni.
+* **Berbagi Media:** Mengirim foto (galeri/kamera), pesan suara (voice note), dan lokasi terkini (Share Location berbasis peta interaktif).
+* **Panggilan (Call/Video Call):** Komunikasi interaktif suara dan video langsung dari dalam sistem aplikasi.
+
+#### 5. Fitur Pelaporan (Technical Report)
+* Penghuni dapat melaporkan keluhan atau kerusakan fasilitas kamar secara langsung dengan mengisi formulir kendala (misal: AC bocor, lampu mati). Laporan ini otomatis terkirim ke panel Admin untuk ditindaklanjuti.
+
+---
+
+### B. Hak Akses: Admin (Pengelola Kos)
+
+#### 6. Beranda Admin (Admin Dashboard)
+Menampilkan visualisasi data ringkas operasional kos-kosan secara real-time:
+* Statistik Jumlah Penghuni Aktif dan Kamar Kosong (Tersedia).
+* Status Laporan Fasilitas yang sedang ditindaklanjuti.
+* Panel verifikasi permintaan masuk kamar dari calon penghuni baru.
+
+#### 7. Fitur Manajemen Kamar dan Penghuni
+* **Manajemen Kamar:** Mengatur pemetaan nomor kamar, fasilitas internal, serta memperbarui status ketersediaan (Kosong/Terisi).
+* **Manajemen Penghuni:** Mengelola basis data informasi penghuni, meliputi profil, nomor kamar, asal daerah, serta kontak darurat (emergency contact).
+* **Tracking Iuran:** Melacak dan mencatat status pembayaran tagihan sewa bulanan beserta tanggal jatuh temponya.
+
+#### 8. Fitur Verifikasi dan Riwayat Agenda
+* **Verifikasi Agenda:** Meninjau usulan rencana kegiatan (Hangout Plans) dari penghuni dengan hak penuh untuk menyetujui (Approve) atau menolak (Reject).
+* **Riwayat Hangout:** Menampilkan arsip rekaman seluruh agenda komunitas kos yang telah sukses terselenggara di masa lalu lengkap beserta jumlah partisipan yang hadir.
+
+---
+> **Catatan Hukum:** Seluruh kode program, aset visual, dan dokumentasi di dalam repositori ini adalah milik sah dari pengembang dan diunggah secara resmi sebagai dokumen pemenuhan berkas pendaftaran Hak Kekayaan Intelektual (HKI) dalam kategori Program Komputer.
