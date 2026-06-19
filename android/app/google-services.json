@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "655493523402",
+    "project_id": "kos-hub-app",
+    "storage_bucket": "kos-hub-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:655493523402:android:4f63c6e53da8203a521133",
+        "android_client_info": {
+          "package_name": "com.example.kos_hub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3NJBdEmnl5pijs3iA-OPMXB7N1-zA8Cg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
