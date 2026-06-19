@@ -68,6 +68,3 @@ Menampilkan visualisasi data ringkas operasional kos-kosan secara real-time:
 #### 8. Fitur Verifikasi dan Riwayat Agenda
 * **Verifikasi Agenda:** Meninjau usulan rencana kegiatan (Hangout Plans) dari penghuni dengan hak penuh untuk menyetujui (Approve) atau menolak (Reject).
 * **Riwayat Hangout:** Menampilkan arsip rekaman seluruh agenda komunitas kos yang telah sukses terselenggara di masa lalu lengkap beserta jumlah partisipan yang hadir.
-
----
-> **Catatan Hukum:** Seluruh kode program, aset visual, dan dokumentasi di dalam repositori ini adalah milik sah dari pengembang dan diunggah secara resmi sebagai dokumen pemenuhan berkas pendaftaran Hak Kekayaan Intelektual (HKI) dalam kategori Program Komputer.
